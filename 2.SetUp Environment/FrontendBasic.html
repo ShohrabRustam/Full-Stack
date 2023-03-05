@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Basic </title>
+</head>
+<body>
+    <h2>Front End Basic </h2>
+    <h3>HTML CSS JavaScript</h3>
+    <ol>
+        <li>Understanding the difference between Frontend and Backend</li>
+        <li>Understand the roles of HTML CSS and JavaScript</li>
+    </ol>
+    <h2>Frontend VS Backend</h2>
+    <ol>
+        <li>The Frontend is the stuff that you see and interact with: HTML, CSS and JS</li>
+        <li>The Backend is everything else: so many choices!</li>
+        <li>Restaurant Analogy : The backend is everything that happens in the Kitchen; the front end is what is plated and send to your table.</li>
+    </ol>
+
+    <h1>HTML</h1>
+    <ol>
+        <li>HYPER TEXT MARKUP LANGUAGE </li>
+        <li>defines the structure of a page 
+            <ul>
+                <li>put an image</li>
+                <li>put a form </li>
+            </ul>
+        </li>
+        <li>The "noun" of a webpage</li>
+    </ol>
+    <h1>CSS</h1>
+    <ol>
+        <li>CASCADING STYLE SHEETS</li>
+        <li>DEFINE THE STYLE OF HTML 
+            <ul>
+                <li>make text colorful </li>
+                <li>Give the first image with border</li>
+            </ul>
+        </li>
+        <li>The "adjective" of webpage</li>
+    </ol>
+
+    <h1>JavaScript</h1>
+    <ol>
+        <li>Adds logic and interactivity of a webpage
+            <ul>
+                <li>Do some math</li>
+                <li>Change the color while user click or do some activity on page or with time </li>
+                <li>Load new data form some other sites</li>
+            </ul>
+        </li>
+        <li>The action or "verb" of webpage</li>
+    </ol>
+    <br><br>
+    <button>Change color of body with click</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function(){
+                document.body.style.background = randColor();
+        })
+
+function randColor(){
+  return '#' + (function color(colorCode){   
+    return (colorCode +=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (colorCode.length == 6) ?  colorCode : color(colorCode); })('');
+}
+    </script>
+</body>
+</html>
